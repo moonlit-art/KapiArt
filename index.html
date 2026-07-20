@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Творчество Капибары — ручная работа, букеты из лент, украшения, игрушки</title>
+    <meta name="description" content="Уникальные изделия ручной работы: букеты из лент, украшения, игрушки из шерсти, фенечки, вышивка. Закажите подарок с душой!">
+    <link rel="canonical" href="https://capybara-art.ru/index.html">
+    <link rel="stylesheet" href="style.css">
+    <!-- Schema.org разметка -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Творчество Капибары",
+        "url": "https://capybara-art.ru",
+        "logo": "https://capybara-art.ru/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+7-999-123-45-67",
+            "contactType": "customer service",
+            "availableLanguage": "Russian"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Творчество Капибары — на главную">
+                <svg viewBox="0 0 100 100"><ellipse cx="50" cy="56" rx="36" ry="30" fill="#8B6B4A"/><ellipse cx="50" cy="58" rx="30" ry="24" fill="#A0784C"/><ellipse cx="50" cy="42" rx="22" ry="18" fill="#B8915C"/><ellipse cx="38" cy="38" rx="8" ry="5" fill="#6B4F30"/><ellipse cx="62" cy="38" rx="8" ry="5" fill="#6B4F30"/><circle cx="36" cy="44" r="4" fill="#2C1A08"/><circle cx="64" cy="44" r="4" fill="#2C1A08"/><circle cx="37.5" cy="43" r="1.5" fill="#fff"/><circle cx="65.5" cy="43" r="1.5" fill="#fff"/><ellipse cx="50" cy="52" rx="10" ry="7" fill="#6B4F30"/><ellipse cx="50" cy="50" rx="7" ry="5" fill="#3D2510"/><ellipse cx="50" cy="49" rx="3" ry="2" fill="#5A3A1E"/><path d="M44 58 Q50 64 56 58" stroke="#3D2510" stroke-width="2" fill="none"/></svg>
+                Капибара
+            </a>
+            <nav class="nav" aria-label="Основное меню">
+                <a href="index.html" class="active">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="cart.html">Корзина</a>
+                <a href="cooperation.html">Сотрудничество</a>
+                <a href="content.html">Контент</a>
+            </nav>
+            <a href="cart.html" class="cart-btn" aria-label="Корзина">
+                🛒 <span id="cartBadge">0</span>
+            </a>
+            <div id="userArea"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-capybara" aria-hidden="true">
+                <svg viewBox="0 0 100 100"><ellipse cx="50" cy="56" rx="38" ry="32" fill="#8B6B4A"/><ellipse cx="50" cy="40" rx="24" ry="19" fill="#B8915C"/><circle cx="34" cy="43" r="4.5" fill="#2C1A08"/><circle cx="66" cy="43" r="4.5" fill="#2C1A08"/><ellipse cx="50" cy="54" rx="11" ry="8" fill="#6B4F30"/></svg>
+            </div>
+            <h1>Творчество <span>Капибары</span></h1>
+            <p>Уникальные изделия ручной работы: букеты из лент, украшения, игрушки из шерсти, фенечки, вышивка и многое другое.</p>
+            <a href="catalog.html" class="btn">Перейти в каталог</a>
+        </section>
+
+        <section class="section popular-categories">
+            <h2 class="section-title">Что мы создаём</h2>
+            <div class="categories-grid">
+                <a href="catalog.html?category=bouquet" class="category-card">
+                    <img src="images/bouquet.jpg" alt="Букеты из лент" class="cat-icon">
+                    <span class="cat-name">Букеты из лент</span>
+                </a>
+                <a href="catalog.html?category=bouquet" class="category-card">
+                    <img src="images/bouquet.jpg" alt="Украшения" class="cat-icon">
+                    <span class="cat-name">Украшения</span>
+                </a>
+                <a href="catalog.html?category=bouquet" class="category-card">
+                    <img src="images/bouquet.jpg" alt="Игрушки и картины" class="cat-icon">
+                    <span class="cat-name">Игрушки и картины</span>
+                </a>
+                <a href="catalog.html?category=bouquet" class="category-card">
+                    <img src="images/bouquet.jpg" alt="Фенечки" class="cat-icon">
+                    <span class="cat-name">Фенечки</span>
+                </a>
+                <a href="catalog.html?category=bouquet" class="category-card">
+                    <img src="images/bouquet.jpg" alt="Вышивка" class="cat-icon">
+                    <span class="cat-name">Вышивка</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section featured-products">
+            <h2 class="section-title">✨ Новинки и бестселлеры</h2>
+            <div class="featured-carousel" id="featuredCarousel">
+                <button class="carousel-arrow prev" id="featuredPrev">‹</button>
+                <div class="featured-track" id="featuredTrack">
+                    <!-- Карточки будут сгенерированы скриптом, но можно вставить статично для SEO -->
+                    <div class="product-card" data-id="2">
+                        <div class="product-img">
+                            <span class="badge badge-new">Новинка</span>
+                            <span class="preview-emoji static">🌷</span>
+                            <span class="preview-emoji animated">🌸</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">Букеты из лент</div>
+                            <h3 class="product-name">Розовый сад</h3>
+                            <div class="product-rating">★★★★★</div>
+                            <div class="product-price"><span style="text-decoration:line-through;color:#999;font-size:0.9rem;">3200 ₽</span> 2880 ₽</div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="4">
+                        <div class="product-img">
+                            <span class="badge badge-hit">Хит</span>
+                            <span class="preview-emoji static">🌻</span>
+                            <span class="preview-emoji animated">🌼</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">Букеты из лент</div>
+                            <h3 class="product-name">Солнечный букет</h3>
+                            <div class="product-rating">★★★★★</div>
+                            <div class="product-price">3500 ₽</div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="5">
+                        <div class="product-img">
+                            <span class="badge badge-new">Новинка</span>
+                            <span class="badge badge-discount">-5%</span>
+                            <span class="preview-emoji static">💎</span>
+                            <span class="preview-emoji animated">✨</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">Украшения</div>
+                            <h3 class="product-name">Серьги с жемчугом</h3>
+                            <div class="product-rating">★★★★★</div>
+                            <div class="product-price"><span style="text-decoration:line-through;color:#999;font-size:0.9rem;">1800 ₽</span> 1710 ₽</div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="6">
+                        <div class="product-img">
+                            <span class="badge badge-hit">Хит</span>
+                            <span class="preview-emoji static">📿</span>
+                            <span class="preview-emoji animated">💛</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">Украшения</div>
+                            <h3 class="product-name">Колье «Капибара»</h3>
+                            <div class="product-rating">★★★★★</div>
+                            <div class="product-price">2400 ₽</div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="9">
+                        <div class="product-img">
+                            <span class="badge badge-hit">Хит</span>
+                            <span class="preview-emoji static">🦫</span>
+                            <span class="preview-emoji animated">🧸</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">Игрушки и картины из шерсти</div>
+                            <h3 class="product-name">Капибара из шерсти</h3>
+                            <div class="product-rating">★★★★★</div>
+                            <div class="product-price">3800 ₽</div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="10">
+                        <div class="product-img">
+                            <span class="badge badge-new">Новинка</span>
+                            <span class="preview-emoji static">🌅</span>
+                            <span class="preview-emoji animated">🎨</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">Игрушки и картины из шерсти</div>
+                            <h3 class="product-name">Картина «Закат»</h3>
+                            <div class="product-rating">★★★★★</div>
+                            <div class="product-price">4500 ₽</div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="13">
+                        <div class="product-img">
+                            <span class="badge badge-new">Новинка</span>
+                            <span class="preview-emoji static">🌈</span>
+                            <span class="preview-emoji animated">🧵</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">Фенечки из мулине</div>
+                            <h3 class="product-name">Радужная фенечка</h3>
+                            <div class="product-rating">★★★★★</div>
+                            <div class="product-price">600 ₽</div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="18">
+                        <div class="product-img">
+                            <span class="badge badge-hit">Хит</span>
+                            <span class="badge badge-discount">-10%</span>
+                            <span class="preview-emoji static">🧶</span>
+                            <span class="preview-emoji animated">🦫</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">Вышивка</div>
+                            <h3 class="product-name">Мини-вышивка «Капибара»</h3>
+                            <div class="product-rating">★★★★★</div>
+                            <div class="product-price"><span style="text-decoration:line-through;color:#999;font-size:0.9rem;">1500 ₽</span> 1350 ₽</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-arrow next" id="featuredNext">›</button>
+            </div>
+        </section>
+
+        <section class="section advantages">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <span class="adv-icon">🧵</span>
+                    <h3>Ручная работа</h3>
+                    <p>Каждое изделие создано с любовью и вниманием к деталям</p>
+                </div>
+                <div class="advantage-item">
+                    <span class="adv-icon">🎁</span>
+                    <h3>Уникальная упаковка</h3>
+                    <p>Крафтовая бумага, ленточка и открытка в подарок</p>
+                </div>
+                <div class="advantage-item">
+                    <span class="adv-icon">🚚</span>
+                    <h3>Быстрая доставка</h3>
+                    <p>Отправляем по всей России, бережно упаковываем</p>
+                </div>
+                <div class="advantage-item">
+                    <span class="adv-icon">💬</span>
+                    <h3>Чат с капибарой</h3>
+                    <p>Наш помощник ответит на вопросы в любое время</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="reviews-heading">
+            <h2 class="section-title" id="reviews-heading">Отзывы</h2>
+            <div class="carousel" role="region" aria-label="Карусель отзывов">
+                <div class="carousel-track">
+                    <article class="review-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <span aria-label="5 звёзд">★★★★★</span>
+                        </div>
+                        <p itemprop="reviewBody">«Нежный пион» превзошёл ожидания! Очень аккуратная работа.</p>
+                        <strong itemprop="author">Анна</strong>
+                    </article>
+                    <article class="review-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <span aria-label="5 звёзд">★★★★★</span>
+                        </div>
+                        <p itemprop="reviewBody">Фенечки яркие и прочные, заказала для всей семьи.</p>
+                        <strong itemprop="author">Мария</strong>
+                    </article>
+                    <article class="review-card" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <span aria-label="5 звёзд">★★★★★</span>
+                        </div>
+                        <p itemprop="reviewBody">Картина из шерсти — украшение гостиной. Спасибо!</p>
+                        <strong itemprop="author">Дмитрий</strong>
+                    </article>
+                </div>
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" aria-label="Отзыв 1"></button>
+                    <button class="carousel-dot" aria-label="Отзыв 2"></button>
+                    <button class="carousel-dot" aria-label="Отзыв 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section subscribe">
+            <div class="subscribe-box">
+                <h2 class="section-title">🎉 Подпишитесь и получите скидку 10%</h2>
+                <p>Узнавайте первыми о новинках, акциях и мастер-классах</p>
+                <form id="subscribeForm" class="subscribe-form">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit">Подписаться</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <svg viewBox="0 0 60 60" width="36" height="36" aria-hidden="true">
+                    <ellipse cx="30" cy="34" rx="18" ry="14" fill="#8B6B4A"/>
+                    <ellipse cx="30" cy="24" rx="11" ry="9" fill="#B8915C"/>
+                    <circle cx="26" cy="26" r="2.5" fill="#2C1A08"/>
+                    <circle cx="34" cy="26" r="2.5" fill="#2C1A08"/>
+                    <ellipse cx="30" cy="32" rx="5" ry="3.5" fill="#3D2510"/>
+                </svg>
+                <p>© 2026 Творчество Капибары<br>Все права защищены</p>
+            </div>
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p><a href="mailto:capybara.art@mail.ru">capybara.art@mail.ru</a></p>
+                <p><a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+            </div>
+            <div class="footer-section footer-social">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="https://t.me/capybara_art" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm-2.426 14.741c-.131.004-.253-.03-.344-.109-.119-.103-.182-.25-.172-.401.02-.302.058-.597.115-.886.084-.425.204-.841.358-1.245l.105-.273c.223-.575.508-1.117.848-1.618.223-.329.472-.639.745-.928.258-.273.536-.526.833-.757.785-.61 1.657-1.081 2.586-1.396.127-.043.263-.058.394-.04.201.027.388.14.5.302.11.16.139.361.075.538-.07.195-.195.367-.359.492-.441.336-.925.618-1.44.838-.423.181-.863.317-1.313.407-.21.042-.422.078-.635.107l-.108.014c-.513.068-1.03.116-1.547.14-1.049.049-2.101.071-3.154.024-.245-.011-.49-.034-.732-.07-.08-.012-.159-.03-.235-.054z"/></svg>
+                    </a>
+                    <a href="https://vk.com/capybara_art" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте" title="ВКонтакте">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0h-7.368c-3.048 0-5.526 2.478-5.526 5.526v7.368c0 3.048 2.478 5.526 5.526 5.526h7.368c3.048 0 5.526-2.478 5.526-5.526v-7.368c0-3.048-2.478-5.526-5.526-5.526zm3.316 12.894c0 1.828-1.488 3.316-3.316 3.316h-7.368c-1.828 0-3.316-1.488-3.316-3.316v-7.368c0-1.828 1.488-3.316 3.316-3.316h7.368c1.828 0 3.316 1.488 3.316 3.316v7.368zm-2.684-6.894h-1.5c-.276 0-.5.224-.5.5v5.5c0 .276-.224.5-.5.5h-1c-.276 0-.5-.224-.5-.5v-5.5c0-.276-.224-.5-.5-.5h-1.5c-.276 0-.5.224-.5.5v5.5c0 .276-.224.5-.5.5h-1c-.276 0-.5-.224-.5-.5v-5.5c0-.276-.224-.5-.5-.5h-1.5c-.276 0-.5.224-.5.5v5.5c0 1.381 1.119 2.5 2.5 2.5h5.5c1.381 0 2.5-1.119 2.5-2.5v-5.5c0-.276-.224-.5-.5-.5z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/capybara_art" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.33 3.608 1.305.975.975 1.243 2.242 1.305 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.33 2.633-1.305 3.608-.975.975-2.242 1.243-3.608 1.305-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.33-3.608-1.305-.975-.975-1.243-2.242-1.305-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.33-2.633 1.305-3.608.975-.975 2.242-1.243 3.608-1.305 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.275.058-2.149.274-2.945.587-.821.32-1.517.748-2.164 1.395-.647.647-1.075 1.343-1.395 2.164-.313.796-.529 1.67-.587 2.945-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.058 1.275.274 2.149.587 2.945.32.821.748 1.517 1.395 2.164.647.647 1.343 1.075 2.164 1.395.796.313 1.67.529 2.945.587 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.275-.058 2.149-.274 2.945-.587.821-.32 1.517-.748 2.164-1.395.647-.647 1.075-1.343 1.395-2.164.313-.796.529-1.67.587-2.945.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.058-1.275-.274-2.149-.587-2.945-.32-.821-.748-1.517-1.395-2.164-.647-.647-1.343-1.075-2.164-1.395-.796-.313-1.67-.529-2.945-.587-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/></svg>
+                    </a>
+                    <a href="https://wa.me/79991234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004c-1.562 0-3.095-.42-4.452-1.216l-.319-.189-3.308.868.883-3.225-.208-.33c-.869-1.382-1.328-2.969-1.328-4.609 0-4.816 3.92-8.736 8.736-8.736 2.333.001 4.526.91 6.176 2.56 1.65 1.65 2.558 3.844 2.558 6.177 0 4.816-3.92 8.736-8.736 8.736zm6.824-15.561c-1.822-1.822-4.245-2.825-6.824-2.825-5.32 0-9.649 4.329-9.649 9.649 0 1.696.443 3.36 1.286 4.823l-1.368 5.001 5.116-1.342c1.408.768 2.995 1.174 4.614 1.174h.004c5.319 0 9.648-4.329 9.648-9.649 0-2.578-1.003-5.002-2.827-6.831z"/></svg>
+                    </a>
+                    <a href="https://pinterest.com/capybara_art" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" title="Pinterest">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-1.182 0-2.317-.212-3.37-.596.462-.721.823-1.485 1.037-2.305.101-.388.517-1.982.517-1.982.27.515.97.954 1.739.954 2.288 0 3.939-2.105 3.939-4.719 0-2.503-2.045-4.732-5.114-4.732-3.572 0-5.443 2.395-5.443 5.008 0 1.212.647 2.722 1.682 3.203.156.073.241.041.277-.111.03-.123.166-.673.228-.933.02-.084.01-.156-.056-.254-.346-.425-.628-1.206-.628-1.933 0-1.865 1.401-3.673 3.798-3.673 2.067 0 3.524 1.406 3.524 3.429 0 2.279-1.152 3.964-2.758 3.964-.862 0-1.507-.714-1.3-1.589.248-1.043.727-2.169.727-2.922 0-.674-.362-1.236-1.111-1.236-.881 0-1.589.912-1.589 2.133 0 .778.263 1.304.263 1.304s-.871 3.687-1.024 4.339c-.178.758-.106 1.809.018 2.506-3.308-1.484-5.645-4.769-5.645-8.611 0-5.247 4.253-9.5 9.5-9.5s9.5 4.253 9.5 9.5-4.253 9.5-9.5 9.5z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollTopBtn" class="scroll-top" aria-label="Наверх">↑</button>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>
