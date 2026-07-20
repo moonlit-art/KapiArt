@@ -5,7 +5,13 @@
 // ---------- ДАННЫЕ ТОВАРОВ ----------
 const products = [
     {
-        id: 1, name: 'Нежный пион', price: 2500, category: 'bouquet', emoji: '🌸', rating: 5,
+        id: 1, name: 'Нежный пион', price: 2500, category: 'bouquet', emoji: '🌸',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
         desc: 'Букет из атласных лент ручной работы. Цвета можно выбрать.',
         images: ['🌸', '🌺', '🌷', '💮'],
         tags: ['букет', 'ленты', 'пион', 'подарок'],
@@ -16,8 +22,14 @@ const products = [
         ]
     },
     {
-        id: 2, name: 'Розовый сад', price: 3200, category: 'bouquet', emoji: '🌷', rating: 5,
-        desc: 'Композиция из розовых пионов и зелени.',
+        id: 2, name: 'Розовый сад', price: 3200, category: 'bouquet', emoji: '🌷',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Композиция из роз, сделанных из атласных лент.',
         images: ['🌷', '🌸', '🌹', '🌿'],
         tags: ['розы', 'букет', 'ленты'],
         isNew: true, isHit: false, discount: 10, popularity: 200,
@@ -26,7 +38,13 @@ const products = [
         ]
     },
     {
-        id: 3, name: 'Лавандовое поле', price: 2800, category: 'bouquet', emoji: '💐', rating: 4,
+        id: 3, name: 'Лавандовое поле', price: 2800, category: 'bouquet', emoji: '💐',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 4,
         desc: 'Нежные лавандовые оттенки.',
         images: ['💐', '🌾', '🌸', '💜'],
         tags: ['лаванда', 'букет', 'подарок'],
@@ -34,25 +52,43 @@ const products = [
         reviews: []
     },
     {
-        id: 4, name: 'Солнечный букет', price: 3500, category: 'bouquet', emoji: '🌻', rating: 5,
-        desc: 'Яркий букет подсолнухов из лент.',
+        id: 4, name: 'Солнечный букет', price: 3500, category: 'bouquet', emoji: '🌻',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Яркий букет цветов из лент.',
         images: ['🌻', '🌼', '🌞', '🌻'],
-        tags: ['подсолнухи', 'букет', 'лето'],
+        tags: ['цветы', 'букет', 'лето'],
         isNew: false, isHit: true, discount: 0, popularity: 180,
         reviews: []
     },
     {
-        id: 5, name: 'Серьги с жемчугом', price: 1800, category: 'jewelry', emoji: '💎', rating: 5,
-        desc: 'Изящные серьги из натурального жемчуга.',
+        id: 5, name: 'Серьги-незабудки', price: 1800, category: 'jewelry', emoji: '💎',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Изящные серьги из полимерной глины.',
         images: ['💎', '🕊️', '✨', '💖'],
-        tags: ['серьги', 'жемчуг', 'украшения'],
+        tags: ['серьги', 'цветы', 'украшения'],
         isNew: true, isHit: false, discount: 5, popularity: 250,
         reviews: [
             { avatar: '👩', author: 'Мария', date: '18.04.2026', rating: 5, text: 'Очень лёгкие и красивые, ношу не снимая!', photo: '💎' }
         ]
     },
     {
-        id: 6, name: 'Колье «Капибара»', price: 2400, category: 'jewelry', emoji: '📿', rating: 5,
+        id: 6, name: 'Колье «Капибара»', price: 2400, category: 'jewelry', emoji: '📿',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
         desc: 'Авторское колье с подвеской капибары.',
         images: ['📿', '🦫', '💛', '🌟'],
         tags: ['колье', 'капибара', 'стиль'],
@@ -60,7 +96,13 @@ const products = [
         reviews: []
     },
     {
-        id: 7, name: 'Браслет с подвесками', price: 1500, category: 'jewelry', emoji: '✨', rating: 4,
+        id: 7, name: 'Браслет с подвесками', price: 1500, category: 'jewelry', emoji: '✨',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 4,
         desc: 'Браслет с шармами на выбор.',
         images: ['✨', '🔮', '💫', '⭐'],
         tags: ['браслет', 'шармы', 'подарок'],
@@ -68,16 +110,28 @@ const products = [
         reviews: []
     },
     {
-        id: 8, name: 'Брошь «Цветок»', price: 1200, category: 'jewelry', emoji: '🌼', rating: 5,
-        desc: 'Брошь из шёлка и бисера.',
+        id: 8, name: 'Брошь «Цветок»', price: 1200, category: 'jewelry', emoji: '🌼',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Брошь из мулине.',
         images: ['🌼', '🧷', '🌸', '🌺'],
         tags: ['брошь', 'цветок', 'ручная работа'],
         isNew: false, isHit: false, discount: 0, popularity: 110,
         reviews: []
     },
     {
-        id: 9, name: 'Капибара из шерсти', price: 3800, category: 'wool', emoji: '🦫', rating: 5,
-        desc: 'Валяная игрушка-капибара, 15 см.',
+        id: 9, name: 'Капибара из шерсти', price: 3800, category: 'wool', emoji: '🦫',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Валяная игрушка-капибара, 5 см.',
         images: ['🦫', '🧸', '🐹', '🤎'],
         tags: ['игрушка', 'валяние', 'капибара'],
         isNew: false, isHit: true, discount: 0, popularity: 300,
@@ -87,31 +141,55 @@ const products = [
         ]
     },
     {
-        id: 10, name: 'Картина «Закат»', price: 4500, category: 'wool', emoji: '🌅', rating: 5,
-        desc: 'Шерстяная акварель, размер А4.',
+        id: 10, name: 'Картина «Лошадь»', price: 4500, category: 'wool', emoji: '🌅',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Картина из шерсти "шерстяная живопись", размер А4.',
         images: ['🌅', '🎨', '🖼️', '🌇'],
         tags: ['картина', 'шерсть', 'интерьер'],
         isNew: true, isHit: false, discount: 0, popularity: 170,
         reviews: []
     },
     {
-        id: 11, name: 'Котик валяный', price: 2900, category: 'wool', emoji: '🐱', rating: 5,
-        desc: 'Милый котик из шерсти.',
+        id: 11, name: 'Зайчик валяный', price: 2900, category: 'wool', emoji: '🐱',
+        photos: [
+            'images/rabbit.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Милый зайчик из шерсти.',
         images: ['🐱', '😺', '🧶', '🐾'],
-        tags: ['кот', 'валяние', 'подарок'],
+        tags: ['заяц', 'валяние', 'подарок'],
         isNew: false, isHit: false, discount: 20, popularity: 140,
         reviews: []
     },
     {
-        id: 12, name: 'Панно «Лес»', price: 5000, category: 'wool', emoji: '🌲', rating: 4,
-        desc: 'Декоративное панно.',
+        id: 12, name: 'Картина "Солнечный котёнок"', price: 5000, category: 'wool', emoji: '🌲',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 4,
+        desc: 'Картина из шерсти.',
         images: ['🌲', '🌳', '🍂', '🦌'],
-        tags: ['панно', 'лес', 'декор'],
+        tags: ['картина', 'кот', 'декор'],
         isNew: false, isHit: false, discount: 0, popularity: 80,
         reviews: []
     },
     {
-        id: 13, name: 'Радужная фенечка', price: 600, category: 'bracelet', emoji: '🌈', rating: 5,
+        id: 13, name: 'Радужная фенечка', price: 600, category: 'bracelet', emoji: '🌈',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
         desc: 'Фенечка из мулине.',
         images: ['🌈', '🌦️', '🧵', '💖'],
         tags: ['фенечка', 'мулине', 'дружба'],
@@ -119,7 +197,13 @@ const products = [
         reviews: []
     },
     {
-        id: 14, name: 'Фенечка «Волны»', price: 700, category: 'bracelet', emoji: '🌊', rating: 4,
+        id: 14, name: 'Фенечка «Волны»', price: 700, category: 'bracelet', emoji: '🌊',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 4,
         desc: 'Морская тематика.',
         images: ['🌊', '🏄', '🐚', '💙'],
         tags: ['фенечка', 'море', 'браслет'],
@@ -127,7 +211,13 @@ const products = [
         reviews: []
     },
     {
-        id: 15, name: 'Фенечка с именем', price: 800, category: 'bracelet', emoji: '🧵', rating: 5,
+        id: 15, name: 'Фенечка с именем', price: 800, category: 'bracelet', emoji: '🧵',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
         desc: 'Именная фенечка.',
         images: ['🧵', '🔤', '💌', '✨'],
         tags: ['именная', 'фенечка', 'подарок'],
@@ -135,15 +225,27 @@ const products = [
         reviews: []
     },
     {
-        id: 16, name: 'Вышивка «Птицы»', price: 3000, category: 'embroidery', emoji: '🐦', rating: 5,
+        id: 16, name: 'Парные брелки «Стич и Ангел»', price: 3000, category: 'embroidery', emoji: '🐦',
+        photos: [
+            'images/stich.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
         desc: 'Вышивка крестом.',
         images: ['🐦', '🕊️', '🪡', '🧵'],
-        tags: ['вышивка', 'птицы', 'картина'],
+        tags: ['вышивка', 'брелоки'],
         isNew: true, isHit: false, discount: 0, popularity: 160,
         reviews: []
     },
     {
-        id: 17, name: 'Вышивка «Цветы»', price: 3500, category: 'embroidery', emoji: '🌺', rating: 4,
+        id: 17, name: 'Вышивка «Цветы»', price: 3500, category: 'embroidery', emoji: '🌺',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 4,
         desc: 'Набор для вышивания.',
         images: ['🌺', '🌼', '🧶', '🖼️'],
         tags: ['вышивка', 'цветы', 'набор'],
@@ -151,52 +253,100 @@ const products = [
         reviews: []
     },
     {
-        id: 18, name: 'Мини-вышивка «Капибара»', price: 1500, category: 'embroidery', emoji: '🧶', rating: 5,
+        id: 18, name: 'Мини-вышивка «Капибара»', price: 1500, category: 'embroidery', emoji: '🧶',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
         desc: 'Маленькая вышивка.',
         images: ['🧶', '🦫', '🖼️', '💝'],
         tags: ['вышивка', 'капибара', 'мини'],
         isNew: false, isHit: true, discount: 10, popularity: 220,
         reviews: []
+    },
+    {
+        id: 19, name: 'Бантики "Цветы"', price: 1500, category: 'jewelry', emoji: '🧶',
+        photos: [
+            'images/fiol.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Бантики для волос "цветы"',
+        images: ['🧶', '🦫', '🖼️', '💝'],
+        tags: ['цветы', 'украшения', 'банты'],
+        isNew: false, isHit: true, discount: 10, popularity: 220,
+        reviews: []
+    },
+    {
+        id: 20, name: 'Брелок «Коровка»', price: 1500, category: 'embroidery', emoji: '🧶',
+        photos: [
+            'images/products/peony-1.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Маленькая вышивка.',
+        images: ['🧶', '🦫', '🖼️', '💝'],
+        tags: ['вышивка', 'коровка', 'брелоки'],
+        isNew: false, isHit: true, discount: 10, popularity: 220,
+        reviews: []
+    },
+    {
+        id: 21, name: 'Медведь валяный', price: 2900, category: 'wool', emoji: '🐱',
+        photos: [
+            'images/bear.jpg',
+            'images/products/peony-2.jpg',
+            'images/products/peony-3.jpg'
+        ],
+        rating: 5,
+        desc: 'Милый мишка из шерсти.',
+        images: ['🐱', '😺', '🧶', '🐾'],
+        tags: ['медведь', 'валяние', 'подарок'],
+        isNew: false, isHit: false, discount: 20, popularity: 140,
+        reviews: []
     }
-  ];
-  
-  const categoryLabels = {
+];
+
+const categoryLabels = {
     bouquet: 'Букеты из лент',
     jewelry: 'Украшения',
     wool: 'Игрушки и картины из шерсти',
     bracelet: 'Фенечки из мулине',
     embroidery: 'Вышивка'
-  };
-  
-  // ---------- ХРАНИЛИЩЕ ПОЛЬЗОВАТЕЛЬСКИХ ОТЗЫВОВ ----------
-  function loadUserReviews() {
-      return JSON.parse(localStorage.getItem('userReviews')) || {};
-  }
-  
-  function saveUserReviews(reviews) {
-      localStorage.setItem('userReviews', JSON.stringify(reviews));
-  }
-  
-  function getAllReviews(productId) {
-      const product = products.find(p => p.id === productId);
-      const presetReviews = product?.reviews || [];
-      const userReviews = loadUserReviews();
-      const extraReviews = userReviews[productId] || [];
-      return [...presetReviews, ...extraReviews];
-  }
-  
-  function getAverageRating(productId) {
-      const allReviews = getAllReviews(productId);
-      if (allReviews.length === 0) {
-          const product = products.find(p => p.id === productId);
-          return product?.rating || 0;
-      }
-      const sum = allReviews.reduce((s, r) => s + r.rating, 0);
-      return Math.round((sum / allReviews.length) * 10) / 10;
-  }
-  
-  // ---------- ДАННЫЕ СТАТЕЙ ----------
-  const articles = [
+};
+
+// ---------- ХРАНИЛИЩЕ ПОЛЬЗОВАТЕЛЬСКИХ ОТЗЫВОВ ----------
+function loadUserReviews() {
+    return JSON.parse(localStorage.getItem('userReviews')) || {};
+}
+
+function saveUserReviews(reviews) {
+    localStorage.setItem('userReviews', JSON.stringify(reviews));
+}
+
+function getAllReviews(productId) {
+    const product = products.find(p => p.id === productId);
+    const presetReviews = product?.reviews || [];
+    const userReviews = loadUserReviews();
+    const extraReviews = userReviews[productId] || [];
+    return [...presetReviews, ...extraReviews];
+}
+
+function getAverageRating(productId) {
+    const allReviews = getAllReviews(productId);
+    if (allReviews.length === 0) {
+        const product = products.find(p => p.id === productId);
+        return product?.rating || 0;
+    }
+    const sum = allReviews.reduce((s, r) => s + r.rating, 0);
+    return Math.round((sum / allReviews.length) * 10) / 10;
+}
+
+// ---------- ДАННЫЕ СТАТЕЙ ----------
+const articles = [
     {
         id: 'article1',
         title: 'Как создать букет из атласных лент',
@@ -248,21 +398,26 @@ const products = [
             <p>Следуя этим шагам, вы сможете свалять симпатичную капибару даже без опыта!</p>
         `
     }
-  ];
-  
-  // ---------- КОРЗИНА ----------
-  class Cart {
+];
+
+// ---------- КОРЗИНА ----------
+class Cart {
     constructor() {
         this.items = JSON.parse(localStorage.getItem('cart')) || [];
     }
-    save() { localStorage.setItem('cart', JSON.stringify(this.items)); }
+    save() {
+        localStorage.setItem('cart', JSON.stringify(this.items));
+    }
     add(product, qty = 1) {
         const exist = this.items.find(i => i.id === product.id);
         if (exist) exist.qty += qty;
         else this.items.push({ ...product, qty });
         this.save();
     }
-    remove(id) { this.items = this.items.filter(i => i.id !== id); this.save(); }
+    remove(id) {
+        this.items = this.items.filter(i => i.id !== id);
+        this.save();
+    }
     changeQty(id, delta) {
         const item = this.items.find(i => i.id === id);
         if (!item) return;
@@ -270,18 +425,31 @@ const products = [
         if (item.qty <= 0) this.remove(id);
         else this.save();
     }
-    get total() { return this.items.reduce((sum, i) => sum + i.price * i.qty, 0); }
-    get count() { return this.items.reduce((sum, i) => sum + i.qty, 0); }
-    clear() { this.items = []; this.save(); }
-  }
-  const cart = new Cart();
-  
-  // ---------- АВТОРИЗАЦИЯ ----------
-  class Auth {
-    static getUsers() { return JSON.parse(localStorage.getItem('users')) || []; }
-    static saveUsers(users) { localStorage.setItem('users', JSON.stringify(users)); }
-    static get currentUser() { return JSON.parse(localStorage.getItem('currentUser')); }
-  
+    get total() {
+        return this.items.reduce((sum, i) => sum + i.price * i.qty, 0);
+    }
+    get count() {
+        return this.items.reduce((sum, i) => sum + i.qty, 0);
+    }
+    clear() {
+        this.items = [];
+        this.save();
+    }
+}
+const cart = new Cart();
+
+// ---------- АВТОРИЗАЦИЯ ----------
+class Auth {
+    static getUsers() {
+        return JSON.parse(localStorage.getItem('users')) || [];
+    }
+    static saveUsers(users) {
+        localStorage.setItem('users', JSON.stringify(users));
+    }
+    static get currentUser() {
+        return JSON.parse(localStorage.getItem('currentUser'));
+    }
+
     static register({ name, email, password, phone }) {
         const users = Auth.getUsers();
         if (users.find(u => u.email === email)) return false;
@@ -290,7 +458,7 @@ const products = [
         Auth.saveUsers(users);
         return true;
     }
-  
+
     static login(email, password) {
         const users = Auth.getUsers();
         const user = users.find(u => u.email === email && u.password === password);
@@ -300,9 +468,11 @@ const products = [
         }
         return null;
     }
-  
-    static logout() { localStorage.removeItem('currentUser'); }
-  
+
+    static logout() {
+        localStorage.removeItem('currentUser');
+    }
+
     static updateProfile(data) {
         const user = Auth.currentUser;
         if (!user) return;
@@ -314,7 +484,7 @@ const products = [
             localStorage.setItem('currentUser', JSON.stringify(users[index]));
         }
     }
-  
+
     static addToFavorites(product) {
         const user = Auth.currentUser;
         if (!user) return false;
@@ -331,7 +501,7 @@ const products = [
         }
         return false;
     }
-  
+
     static removeFromFavorites(productId) {
         const user = Auth.currentUser;
         if (!user) return;
@@ -343,18 +513,20 @@ const products = [
             localStorage.setItem('currentUser', JSON.stringify(users[index]));
         }
     }
-  
-    static getFavorites() { return Auth.currentUser?.favorites || []; }
-  }
-  
-  // ---------- ПРОГРАММА ЛОЯЛЬНОСТИ ----------
-  class Loyalty {
+
+    static getFavorites() {
+        return Auth.currentUser?.favorites || [];
+    }
+}
+
+// ---------- ПРОГРАММА ЛОЯЛЬНОСТИ ----------
+class Loyalty {
     static getPoints() {
         const user = Auth.currentUser;
         if (!user) return 0;
         return user.loyaltyPoints || 0;
     }
-  
+
     static addPoints(amount) {
         const user = Auth.currentUser;
         if (!user) return;
@@ -366,19 +538,19 @@ const products = [
             localStorage.setItem('currentUser', JSON.stringify(users[index]));
         }
     }
-  }
-  
-  // ---------- УВЕДОМЛЕНИЯ ----------
-  function showToast(msg) {
+}
+
+// ---------- УВЕДОМЛЕНИЯ ----------
+function showToast(msg) {
     const toast = document.getElementById('toast');
     if (!toast) return;
     toast.textContent = msg;
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 2500);
-  }
-  
-  // ---------- ОБНОВЛЕНИЕ ИНДИКАТОРА КОРЗИНЫ ----------
-  function updateCartBadge() {
+}
+
+// ---------- ОБНОВЛЕНИЕ ИНДИКАТОРА КОРЗИНЫ ----------
+function updateCartBadge() {
     const badge = document.getElementById('cartBadge');
     if (badge) {
         badge.textContent = cart.count;
@@ -387,10 +559,10 @@ const products = [
             setTimeout(() => badge.classList.remove('bump'), 400);
         }
     }
-  }
-  
-  // ---------- ХЕДЕР ----------
-  function updateHeaderUser() {
+}
+
+// ---------- ХЕДЕР ----------
+function updateHeaderUser() {
     const area = document.getElementById('userArea');
     if (!area) return;
     const user = Auth.currentUser;
@@ -406,10 +578,10 @@ const products = [
     } else {
         area.innerHTML = `<a href="login.html" class="btn-outline">Войти</a>`;
     }
-  }
-  
-  // ---------- ИЗБРАННОЕ ----------
-  function toggleFavorite(product, button) {
+}
+
+// ---------- ИЗБРАННОЕ ----------
+function toggleFavorite(product, button) {
     if (!Auth.currentUser) {
         showToast('Войдите, чтобы добавить в избранное');
         return;
@@ -418,28 +590,30 @@ const products = [
     const exists = favs.find(f => f.id === product.id);
     if (exists) {
         Auth.removeFromFavorites(product.id);
-        if (button) { button.classList.remove('active'); button.textContent = '🤍'; }
+        if (button) { button.classList.remove('active');
+            button.textContent = '🤍'; }
         showToast('Удалено из избранного');
     } else {
         Auth.addToFavorites(product);
-        if (button) { button.classList.add('active'); button.textContent = '❤️'; }
+        if (button) { button.classList.add('active');
+            button.textContent = '❤️'; }
         showToast('Добавлено в избранное');
     }
-  }
-  
-  // ---------- КАТАЛОГ ----------
-  let currentCategory = 'all';
-  let currentSort = 'popularity';
-  let currentSearch = '';
-  let currentTag = 'all';
-  
-  function getAllTags() {
+}
+
+// ---------- КАТАЛОГ ----------
+let currentCategory = 'all';
+let currentSort = 'popularity';
+let currentSearch = '';
+let currentTag = 'all';
+
+function getAllTags() {
     const tags = new Set();
     products.forEach(p => p.tags.forEach(t => tags.add(t)));
     return Array.from(tags);
-  }
-  
-  function renderTags(activeTag) {
+}
+
+function renderTags(activeTag) {
     const container = document.getElementById('tagsBar');
     if (!container) return;
     const allTags = getAllTags();
@@ -455,9 +629,9 @@ const products = [
             applyFiltersAndRender();
         });
     });
-  }
-  
-  function applyFiltersAndRender() {
+}
+
+function applyFiltersAndRender() {
     let filtered = products.filter(p => {
         if (currentCategory !== 'all' && p.category !== currentCategory) return false;
         if (currentTag !== 'all' && !p.tags.includes(currentTag)) return false;
@@ -468,69 +642,96 @@ const products = [
         return true;
     });
     switch (currentSort) {
-        case 'price-asc': filtered.sort((a,b) => a.price - b.price); break;
-        case 'price-desc': filtered.sort((a,b) => b.price - a.price); break;
-        case 'rating': filtered.sort((a,b) => b.rating - a.rating); break;
-        case 'new': filtered.sort((a,b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0)); break;
-        case 'popularity': default: filtered.sort((a,b) => b.popularity - a.popularity); break;
+        case 'price-asc':
+            filtered.sort((a, b) => a.price - b.price);
+            break;
+        case 'price-desc':
+            filtered.sort((a, b) => b.price - a.price);
+            break;
+        case 'rating':
+            filtered.sort((a, b) => b.rating - a.rating);
+            break;
+        case 'new':
+            filtered.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+            break;
+        case 'popularity':
+        default:
+            filtered.sort((a, b) => b.popularity - a.popularity);
+            break;
     }
     renderCatalogGrid(filtered);
-  }
-  
-  function renderCatalogGrid(filteredProducts) {
+}
+
+function renderCatalogGrid(filteredProducts) {
     const grid = document.getElementById('productsGrid');
     if (!grid) return;
-    const user = Auth.currentUser;
-    const favIds = user ? Auth.getFavorites().map(f => f.id) : [];
-    grid.innerHTML = filteredProducts.map(p => {
-        const disc = p.discount > 0 ? `<span class="badge badge-discount">-${p.discount}%</span>` : '';
-        const isNew = p.isNew ? '<span class="badge badge-new">Новинка</span>' : '';
-        const isHit = p.isHit ? '<span class="badge badge-hit">Хит</span>' : '';
-        const isFav = favIds.includes(p.id);
-        const avgRating = getAverageRating(p.id);
-        return `
-        <article class="product-card" data-id="${p.id}" itemscope itemtype="https://schema.org/Product">
-            <div class="product-img">
-                ${disc}${isNew}${isHit}
-                <span class="preview-emoji static">${p.emoji}</span>
-                <span class="preview-emoji animated">${p.images[1] || p.emoji}</span>
-            </div>
-            <button class="fav-btn ${isFav ? 'active' : ''}" data-id="${p.id}">${isFav ? '❤️' : '🤍'}</button>
-            <div class="product-body">
-                <div class="product-category">${categoryLabels[p.category]}</div>
-                <h3 class="product-name" itemprop="name">${p.name}</h3>
-                <div class="product-rating">${'★'.repeat(Math.round(avgRating))}${'☆'.repeat(5 - Math.round(avgRating))} <span style="font-size:0.8rem;">(${avgRating})</span></div>
-                <div class="product-tags">${p.tags.map(t => `<span class="product-tag">#${t}</span>`).join('')}</div>
-                <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                    ${p.discount > 0 ? `<span style="text-decoration:line-through;color:#999;font-size:0.9rem;">${p.price} ₽</span> ${Math.round(p.price*(1-p.discount/100))} ₽` : `${p.price} ₽`}
+
+    try {
+        const user = Auth.currentUser;
+        const favIds = user ? Auth.getFavorites().map(f => f.id) : [];
+
+        grid.innerHTML = filteredProducts.map(p => {
+            const disc = p.discount > 0 ? `<span class="badge badge-discount">-${p.discount}%</span>` : '';
+            const isNew = p.isNew ? '<span class="badge badge-new">Новинка</span>' : '';
+            const isHit = p.isHit ? '<span class="badge badge-hit">Хит</span>' : '';
+            const isFav = favIds.includes(p.id);
+            const avgRating = getAverageRating(p.id);
+
+            // Безопасное получение фото или эмодзи
+            let imageHTML = '';
+            if (p.photos && p.photos.length > 0) {
+                imageHTML = `<img src="${p.photos[0]}" alt="${p.name}" class="product-photo" loading="lazy">`;
+            } else {
+                imageHTML = `<span class="preview-emoji static">${p.emoji}</span>`;
+            }
+
+            return `<article class="product-card" data-id="${p.id}">
+                <div class="product-img">
+                    ${disc}${isNew}${isHit}
+                    ${imageHTML}
                 </div>
-            </div>
-        </article>`;
-    }).join('');
-  
-    grid.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('click', (e) => {
-            if (e.target.closest('.fav-btn')) return;
-            const id = +card.dataset.id;
-            const product = products.find(p => p.id === id);
-            if (product) openProductModal(product);
+                <button class="fav-btn ${isFav ? 'active' : ''}" data-id="${p.id}">${isFav ? '❤️' : '🤍'}</button>
+                <div class="product-body">
+                    <div class="product-category">${categoryLabels[p.category]}</div>
+                    <h3 class="product-name">${p.name}</h3>
+                    <div class="product-rating">${'★'.repeat(Math.round(avgRating))}${'☆'.repeat(5 - Math.round(avgRating))} <span style="font-size:0.8rem;">(${avgRating})</span></div>
+                    <div class="product-tags">${p.tags.map(t => `<span class="product-tag">#${t}</span>`).join('')}</div>
+                    <div class="product-price">${p.discount > 0
+                        ? `<span style="text-decoration:line-through;color:#999;font-size:0.9rem;">${p.price} ₽</span> ${Math.round(p.price * (1 - p.discount / 100))} ₽`
+                        : `${p.price} ₽`}</div>
+                </div>
+            </article>`;
+        }).join('');
+
+        // Обработчики кликов
+        grid.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (!e.target.closest('.fav-btn')) {
+                    const id = +card.dataset.id;
+                    const prod = products.find(p => p.id === id);
+                    if (prod) openProductModal(prod);
+                }
+            });
         });
-    });
-  
-    grid.querySelectorAll('.fav-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const id = +btn.dataset.id;
-            const product = products.find(p => p.id === id);
-            toggleFavorite(product, btn);
+
+        grid.querySelectorAll('.fav-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const id = +btn.dataset.id;
+                const product = products.find(p => p.id === id);
+                toggleFavorite(product, btn);
+            });
         });
-    });
-  }
-  
-  function initCatalog() {
+    } catch (error) {
+        console.error('Ошибка в renderCatalogGrid:', error);
+        grid.innerHTML = '<p style="text-align:center;color:red;">Произошла ошибка при загрузке товаров. Попробуйте обновить страницу.</p>';
+    }
+}
+
+function initCatalog() {
     const grid = document.getElementById('productsGrid');
     if (!grid) return;
-  
+
     const searchInput = document.getElementById('searchInput');
     const searchBtn = document.getElementById('searchBtn');
     searchBtn?.addEventListener('click', () => {
@@ -543,13 +744,13 @@ const products = [
             applyFiltersAndRender();
         }
     });
-  
+
     const sortSelect = document.getElementById('sortSelect');
     sortSelect?.addEventListener('change', (e) => {
         currentSort = e.target.value;
         applyFiltersAndRender();
     });
-  
+
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -560,44 +761,115 @@ const products = [
             applyFiltersAndRender();
         });
     });
-  
+
     renderTags('all');
     applyFiltersAndRender();
-  }
-  
-  // ---------- МОДАЛЬНОЕ ОКНО ТОВАРА (исправлено) ----------
-  function openProductModal(product) {
+}
+
+// ---------- МИНИ-КАРУСЕЛЬ НА ГЛАВНОЙ ----------
+function initFeaturedCarousel() {
+    const track = document.getElementById('featuredTrack');
+    const prevBtn = document.getElementById('featuredPrev');
+    const nextBtn = document.getElementById('featuredNext');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const featured = products.filter(p => p.isNew || p.isHit).slice(0, 8);
+    if (featured.length === 0) {
+        track.innerHTML = '<p style="text-align:center;padding:20px;">Скоро появятся новинки!</p>';
+        return;
+    }
+
+    track.innerHTML = featured.map(p => {
+        const imageHTML = (p.photos && p.photos.length > 0)
+            ? `<img src="${p.photos[0]}" alt="${p.name}" class="product-photo">`
+            : p.emoji;
+        return `<div class="product-card" data-id="${p.id}">
+            <div class="product-img">${imageHTML}</div>
+            <div class="product-body">
+                <div class="product-name">${p.name}</div>
+                <div class="product-price">${p.price} ₽</div>
+            </div>
+        </div>`;
+    }).join('');
+
+    track.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const id = +card.dataset.id;
+            const prod = products.find(p => p.id === id);
+            if (prod) openProductModal(prod);
+        });
+    });
+
+    // Навигация карусели
+    const cards = track.querySelectorAll('.product-card');
+    if (cards.length === 0) return;
+    const cardWidth = cards[0].offsetWidth + 12;
+    let position = 0;
+    const maxPosition = Math.max(0, (cards.length - getVisibleCards()) * cardWidth);
+
+    function getVisibleCards() {
+        const w = track.parentElement.offsetWidth;
+        if (w <= 600) return 2;
+        if (w <= 900) return 3;
+        return 4;
+    }
+
+    function updatePosition() {
+        track.style.transform = `translateX(-${position}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        const step = getVisibleCards() * cardWidth;
+        position = Math.min(position + step, maxPosition);
+        updatePosition();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        const step = getVisibleCards() * cardWidth;
+        position = Math.max(position - step, 0);
+        updatePosition();
+    });
+
+    window.addEventListener('resize', () => {
+        position = 0;
+        updatePosition();
+    });
+}
+
+// ---------- МОДАЛЬНОЕ ОКНО ТОВАРА ----------
+function openProductModal(product) {
     const overlay = document.createElement('div');
     overlay.className = 'modal-overlay open';
-    const images = product.images?.length ? product.images : [product.emoji];
+
+    // Подготовка слайдов: если есть photos — используем их, иначе эмодзи
+    const slides = product.photos && product.photos.length
+        ? product.photos.map(photo => `<img src="${photo}" alt="${product.name}" class="modal-carousel-image">`)
+        : (product.images || [product.emoji]).map(img => `<div class="modal-carousel-slide">${img}</div>`);
+
     let currentSlide = 0;
-  
     const user = Auth.currentUser;
     const isFav = user ? Auth.getFavorites().some(f => f.id === product.id) : false;
     const related = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
-  
     const allReviews = getAllReviews(product.id);
-    const reviewsHTML = renderReviewsHTML(allReviews);
-  
     const votes = JSON.parse(localStorage.getItem('productVotes') || '{}');
     const currentVotes = votes[product.id] || 0;
     const hasVoted = localStorage.getItem(`voted_${product.id}`) === 'true';
-  
-    // Вспомогательная функция для рендеринга отзывов
+
+    // Функция рендеринга списка отзывов
     function renderReviewsHTML(reviews) {
         return reviews.length ? reviews.map(r => `
             <div class="review-item">
                 <div class="review-avatar">${r.avatar || '👤'}</div>
                 <div class="review-content">
                     <div class="review-header"><span class="review-author">${r.author}</span><span class="review-date">${r.date || ''}</span></div>
-                    <div class="review-rating">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div>
+                    <div class="review-rating">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
                     <div class="review-text">${r.text}</div>
                     ${r.photo ? `<div class="review-photo">${r.photo}</div>` : ''}
                 </div>
             </div>
         `).join('') : '<p>Пока нет отзывов. Будьте первым!</p>';
     }
-  
+
     // Функция обновления блока отзывов в модалке
     function refreshReviews() {
         const updated = getAllReviews(product.id);
@@ -605,117 +877,126 @@ const products = [
         const reviewsCount = overlay.querySelector('.reviews-block h4');
         if (reviewsList) reviewsList.innerHTML = renderReviewsHTML(updated);
         if (reviewsCount) reviewsCount.textContent = `Отзывы (${updated.length})`;
-        // обновить рейтинг
         const ratingEl = overlay.querySelector('.modal-rating-display');
         if (ratingEl) ratingEl.innerHTML = `⭐ ${'★'.repeat(Math.round(getAverageRating(product.id)))} (${getAverageRating(product.id)})`;
     }
-  
+
     overlay.innerHTML = `
-        <div class="modal">
-            <button class="modal-close" aria-label="Закрыть">✕</button>
-            <div class="modal-carousel">
-                <div class="modal-carousel-track">${images.map((img,i) => `<div class="modal-carousel-slide">${img}</div>`).join('')}</div>
-                <button class="modal-carousel-btn prev">‹</button>
-                <button class="modal-carousel-btn next">›</button>
-            </div>
-            <div class="modal-carousel-dots">${images.map((_,i) => `<button class="modal-carousel-dot${i===0?' active':''}"></button>`).join('')}</div>
-            <h3>${product.name}</h3>
-            <p>${product.desc}</p>
-            <p class="modal-rating-display">⭐ ${'★'.repeat(Math.round(getAverageRating(product.id)))} (${getAverageRating(product.id)})</p>
-            <p style="font-weight:700;font-size:1.3rem;">
-                ${product.discount > 0 ? `<span style="text-decoration:line-through;color:#999;">${product.price} ₽</span> ${Math.round(product.price*(1-product.discount/100))} ₽` : `${product.price} ₽`}
-            </p>
-            ${user ? `<button class="fav-btn ${isFav ? 'active' : ''}" id="modalFavBtn" style="position:static; margin:0 auto 16px;">${isFav ? '❤️' : '🤍'}</button>` : ''}
-            <div style="display:flex;gap:10px;align-items:center;margin:16px 0;">
-                <button class="cart-item-qty" id="modalMinus">−</button>
-                <span id="modalQty">1</span>
-                <button class="cart-item-qty" id="modalPlus">+</button>
-            </div>
-            <button class="btn" id="modalAddToCart">Добавить в корзину</button>
-  
-            <div class="reviews-block" id="reviewsContainer">
-                <h4>Отзывы (${allReviews.length})</h4>
-                <div id="reviewsList">${reviewsHTML}</div>
-                ${user ? `
-                <div class="add-review-form" id="addReviewForm">
-                    <h4>Оставить отзыв</h4>
-                    <div class="form-group"><label>Ваше имя</label><input type="text" id="reviewName" value="${user.name}" readonly></div>
-                    <div class="form-group"><label>Оценка</label>
-                        <div class="star-rating" id="starRating">
-                            ${[5,4,3,2,1].map(i => `<input type="radio" id="star${i}" name="rating" value="${i}"><label for="star${i}" title="${i} звезда(ы)">★</label>`).join('')}
-                        </div>
+    <div class="modal">
+        <button class="modal-close">✕</button>
+        <div class="modal-carousel">
+            <div class="modal-carousel-track">${slides.join('')}</div>
+            <button class="modal-carousel-btn prev">‹</button>
+            <button class="modal-carousel-btn next">›</button>
+        </div>
+        <div class="modal-carousel-dots">
+            ${slides.map((_, i) => `<button class="modal-carousel-dot${i === 0 ? ' active' : ''}"></button>`).join('')}
+        </div>
+        <h3>${product.name}</h3>
+        <p>${product.desc}</p>
+        <p class="modal-rating-display">⭐ ${'★'.repeat(Math.round(getAverageRating(product.id)))} (${getAverageRating(product.id)})</p>
+        <p style="font-weight:700;font-size:1.3rem;">
+            ${product.discount > 0 ? `<span style="text-decoration:line-through;color:#999;">${product.price} ₽</span> ${Math.round(product.price * (1 - product.discount / 100))} ₽` : `${product.price} ₽`}
+        </p>
+        ${user ? `<button class="fav-btn ${isFav ? 'active' : ''}" id="modalFavBtn" style="position:static;margin:0 auto 16px;">${isFav ? '❤️' : '🤍'}</button>` : ''}
+        <button class="btn share-btn" id="shareBtn" style="background:transparent; border:1px solid var(--brown-light); color: var(--brown); margin:8px 0; width:100%;">📤 Поделиться</button>
+        <div style="display:flex;gap:10px;align-items:center;margin:16px 0;">
+            <button class="cart-item-qty" id="modalMinus">−</button>
+            <span id="modalQty">1</span>
+            <button class="cart-item-qty" id="modalPlus">+</button>
+        </div>
+        <button class="btn" id="modalAddToCart">Добавить в корзину</button>
+
+        <!-- Отзывы -->
+        <div class="reviews-block" id="reviewsContainer">
+            <h4>Отзывы (${allReviews.length})</h4>
+            <div id="reviewsList">${renderReviewsHTML(allReviews)}</div>
+            ${user ? `
+            <div class="add-review-form" id="addReviewForm">
+                <h4>Оставить отзыв</h4>
+                <div class="form-group"><label>Ваше имя</label><input type="text" id="reviewName" value="${user.name}" readonly></div>
+                <div class="form-group"><label>Оценка</label>
+                    <div class="star-rating" id="starRating">
+                        ${[5,4,3,2,1].map(i => `<input type="radio" id="star${i}" name="rating" value="${i}"><label for="star${i}" title="${i} звезда(ы)">★</label>`).join('')}
                     </div>
-                    <div class="form-group"><label>Ваш отзыв</label><textarea id="reviewText" rows="3" placeholder="Поделитесь впечатлениями..."></textarea></div>
-                    <div class="form-group"><label>Фото (эмодзи)</label><input type="text" id="reviewPhoto" placeholder="🌸, 🎁 и т.п." maxlength="2"></div>
-                    <button type="button" class="btn-submit" id="submitReview">Отправить отзыв</button>
-                </div>` : '<p style="margin-top:16px;">Войдите, чтобы оставить отзыв.</p>'}
-            </div>
-  
-            <div class="vote-section">
-                <button class="vote-btn ${hasVoted ? 'voted' : ''}" id="voteBtn">
-                    ${hasVoted ? '❤️ Ваш голос учтён' : '🤍 Нравится'}
-                </button>
-                <span class="vote-count" id="voteCount">${currentVotes} голосов</span>
-            </div>
-  
-            ${related.length ? `
-            <div class="related-products">
-                <div class="related-title">Связанные товары</div>
-                <div class="related-grid">
-                    ${related.map(r => `
-                        <div class="related-item" data-id="${r.id}">
-                            <div class="emoji">${r.emoji}</div>
-                            <div class="name">${r.name}</div>
-                            <div class="price">${r.price} ₽</div>
-                        </div>
-                    `).join('')}
                 </div>
-            </div>` : ''}
-        </div>`;
+                <div class="form-group"><label>Ваш отзыв</label><textarea id="reviewText" rows="3" placeholder="Поделитесь впечатлениями..."></textarea></div>
+                <div class="form-group"><label>Фото (эмодзи)</label><input type="text" id="reviewPhoto" placeholder="🌸, 🎁 и т.п." maxlength="2"></div>
+                <button type="button" class="btn-submit" id="submitReview">Отправить отзыв</button>
+            </div>` : '<p style="margin-top:16px;">Войдите, чтобы оставить отзыв.</p>'}
+        </div>
+
+        <!-- Голосование -->
+        <div class="vote-section">
+            <button class="vote-btn ${hasVoted ? 'voted' : ''}" id="voteBtn">${hasVoted ? '❤️ Ваш голос учтён' : '🤍 Нравится'}</button>
+            <span class="vote-count" id="voteCount">${currentVotes} голосов</span>
+        </div>
+
+        ${related.length ? `
+        <div class="related-products">
+            <div class="related-title">Связанные товары</div>
+            <div class="related-grid">
+                ${related.map(r => `
+                    <div class="related-item" data-id="${r.id}">
+                        <div class="emoji">${r.emoji}</div>
+                        <div class="name">${r.name}</div>
+                        <div class="price">${r.price} ₽</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>` : ''}
+    </div>`;
     document.body.appendChild(overlay);
-  
-    // --- Карусель ---
+
+    // Карусель в модалке
     const track = overlay.querySelector('.modal-carousel-track');
     const dots = overlay.querySelectorAll('.modal-carousel-dot');
-    const prev = overlay.querySelector('.prev');
-    const next = overlay.querySelector('.next');
     function updateSlide(i) {
-        track.style.transform = `translateX(-${i*100}%)`;
-        dots.forEach((d,j) => d.classList.toggle('active', j===i));
+        track.style.transform = `translateX(-${i * 100}%)`;
+        dots.forEach((d, j) => d.classList.toggle('active', j === i));
         currentSlide = i;
     }
-    prev.addEventListener('click', () => updateSlide((currentSlide-1+images.length)%images.length));
-    next.addEventListener('click', () => updateSlide((currentSlide+1)%images.length));
-    dots.forEach((dot,i) => dot.addEventListener('click', () => updateSlide(i)));
-  
-    // --- Количество ---
+    overlay.querySelector('.prev').addEventListener('click', () => updateSlide((currentSlide - 1 + slides.length) % slides.length));
+    overlay.querySelector('.next').addEventListener('click', () => updateSlide((currentSlide + 1) % slides.length));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => updateSlide(i)));
+
+    // Количество
     let qty = 1;
-    overlay.querySelector('#modalMinus').addEventListener('click', () => { if(qty>1) qty--; overlay.querySelector('#modalQty').textContent = qty; });
-    overlay.querySelector('#modalPlus').addEventListener('click', () => { qty++; overlay.querySelector('#modalQty').textContent = qty; });
-  
-    // --- Закрытие ---
+    overlay.querySelector('#modalMinus').addEventListener('click', () => { if (qty > 1) qty--;
+        overlay.querySelector('#modalQty').textContent = qty; });
+    overlay.querySelector('#modalPlus').addEventListener('click', () => { qty++;
+        overlay.querySelector('#modalQty').textContent = qty; });
+
+    // Закрытие
     overlay.querySelector('.modal-close').addEventListener('click', () => overlay.remove());
     overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
-  
-    // --- Избранное в модалке ---
+
+    // Избранное
     const favBtn = overlay.querySelector('#modalFavBtn');
-    if (favBtn) {
-        favBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleFavorite(product, favBtn);
-        });
-    }
-  
-    // --- Добавление в корзину ---
+    if (favBtn) favBtn.addEventListener('click', (e) => { e.stopPropagation();
+        toggleFavorite(product, favBtn); });
+
+    // Добавление в корзину с анимацией
     overlay.querySelector('#modalAddToCart').addEventListener('click', () => {
-        const finalPrice = product.discount > 0 ? Math.round(product.price*(1-product.discount/100)) : product.price;
-        cart.add({...product, price: finalPrice}, qty);
+        const finalPrice = product.discount > 0 ? Math.round(product.price * (1 - product.discount / 100)) : product.price;
+        cart.add({ ...product, price: finalPrice }, qty);
         updateCartBadge();
         showToast(`${product.name} × ${qty} в корзине!`);
         overlay.remove();
     });
-  
-    // --- Голосование ---
+
+    // Поделиться
+    overlay.querySelector('#shareBtn').addEventListener('click', () => {
+        const shareUrl = window.location.origin + window.location.pathname.replace('index.html', 'catalog.html') + '?id=' + product.id;
+        const shareText = `Посмотри: "${product.name}" в Творчестве Капибары!`;
+        if (navigator.share) {
+            navigator.share({ title: product.name, text: shareText, url: shareUrl }).catch(() => {});
+        } else {
+            navigator.clipboard.writeText(shareUrl).then(() => showToast('Ссылка скопирована!')).catch(() => showToast('Не удалось скопировать ссылку'));
+        }
+    });
+
+    // Голосование
     const voteBtn = overlay.querySelector('#voteBtn');
     if (voteBtn) {
         voteBtn.addEventListener('click', () => {
@@ -730,8 +1011,44 @@ const products = [
             showToast('Спасибо за ваш голос!');
         });
     }
-  
-    // --- Связанные товары ---
+
+    // Отправка отзыва
+    const submitBtn = overlay.querySelector('#submitReview');
+    if (submitBtn) {
+        submitBtn.addEventListener('click', () => {
+            const name = overlay.querySelector('#reviewName').value.trim();
+            const ratingInput = overlay.querySelector('input[name="rating"]:checked');
+            const text = overlay.querySelector('#reviewText').value.trim();
+            const photo = overlay.querySelector('#reviewPhoto').value.trim() || '';
+
+            if (!ratingInput) { showToast('Поставьте оценку!'); return; }
+            if (!text) { showToast('Напишите текст отзыва'); return; }
+
+            const rating = parseInt(ratingInput.value);
+            const newReview = {
+                avatar: user.name.charAt(0).toUpperCase(),
+                author: name,
+                date: new Date().toLocaleDateString('ru-RU'),
+                rating: rating,
+                text: text,
+                photo: photo
+            };
+
+            const allUserReviews = loadUserReviews();
+            if (!allUserReviews[product.id]) allUserReviews[product.id] = [];
+            allUserReviews[product.id].push(newReview);
+            saveUserReviews(allUserReviews);
+
+            overlay.querySelector('input[name="rating"]:checked').checked = false;
+            overlay.querySelector('#reviewText').value = '';
+            overlay.querySelector('#reviewPhoto').value = '';
+
+            refreshReviews();
+            showToast('Спасибо за ваш отзыв!');
+        });
+    }
+
+    // Связанные товары
     overlay.querySelectorAll('.related-item').forEach(item => {
         item.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -743,55 +1060,16 @@ const products = [
             }
         });
     });
-  
-    // --- ОТПРАВКА ОТЗЫВА (исправлено: теперь ВНУТРИ функции) ---
-    const submitBtn = overlay.querySelector('#submitReview');
-    if (submitBtn) {
-        submitBtn.addEventListener('click', () => {
-            const name = overlay.querySelector('#reviewName').value.trim();
-            const ratingInput = overlay.querySelector('input[name="rating"]:checked');
-            const text = overlay.querySelector('#reviewText').value.trim();
-            const photo = overlay.querySelector('#reviewPhoto').value.trim() || '';
-  
-            if (!ratingInput) { showToast('Поставьте оценку!'); return; }
-            if (!text) { showToast('Напишите текст отзыва'); return; }
-  
-            const rating = parseInt(ratingInput.value);
-            const newReview = {
-                avatar: user.name.charAt(0).toUpperCase(),
-                author: name,
-                date: new Date().toLocaleDateString('ru-RU'),
-                rating: rating,
-                text: text,
-                photo: photo
-            };
-  
-            // Сохраняем в localStorage
-            const allUserReviews = loadUserReviews();
-            if (!allUserReviews[product.id]) allUserReviews[product.id] = [];
-            allUserReviews[product.id].push(newReview);
-            saveUserReviews(allUserReviews);
-  
-            // Очистить форму
-            overlay.querySelector('input[name="rating"]:checked').checked = false;
-            overlay.querySelector('#reviewText').value = '';
-            overlay.querySelector('#reviewPhoto').value = '';
-  
-            // Обновить отзывы на экране
-            refreshReviews();
-            showToast('Спасибо за ваш отзыв!');
-        });
-    }
-  } // ← конец функции openProductModal
-  
-  // ---------- МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ ----------
-  function openAuthModal(onSuccess) {
+} // конец openProductModal
+
+// ---------- МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ ----------
+function openAuthModal(onSuccess) {
     if (Auth.currentUser) {
         showToast('Вы уже авторизованы!');
         if (onSuccess) onSuccess();
         return;
     }
-  
+
     const overlay = document.createElement('div');
     overlay.className = 'modal-overlay open';
     overlay.innerHTML = `
@@ -818,7 +1096,7 @@ const products = [
         </div>
     `;
     document.body.appendChild(overlay);
-  
+
     const tabs = overlay.querySelectorAll('.auth-tab');
     const loginForm = overlay.querySelector('#modalLoginForm');
     const registerForm = overlay.querySelector('#modalRegisterForm');
@@ -831,11 +1109,11 @@ const products = [
             registerForm.classList.toggle('hidden', target !== 'register');
         });
     });
-  
+
     const closeBtn = overlay.querySelector('.modal-close');
     closeBtn.addEventListener('click', () => overlay.remove());
     overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
-  
+
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = overlay.querySelector('#modalLoginEmail').value.trim();
@@ -850,7 +1128,7 @@ const products = [
             overlay.querySelector('#modalAuthMessage').textContent = 'Неверный email или пароль.';
         }
     });
-  
+
     registerForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const name = overlay.querySelector('#modalRegName').value.trim();
@@ -864,10 +1142,10 @@ const products = [
             overlay.querySelector('#modalAuthMessage').textContent = 'Пользователь с таким email уже существует.';
         }
     });
-  }
-  
-  // ---------- МОДАЛЬНОЕ ОКНО ПОЛНОГО ТЕКСТА СТАТЬИ ----------
-  function openFullArticleModal(article) {
+}
+
+// ---------- МОДАЛЬНОЕ ОКНО ПОЛНОГО ТЕКСТА СТАТЬИ ----------
+function openFullArticleModal(article) {
     const overlay = document.createElement('div');
     overlay.className = 'modal-overlay open';
     overlay.innerHTML = `
@@ -879,13 +1157,13 @@ const products = [
         </div>
     `;
     document.body.appendChild(overlay);
-  
+
     overlay.querySelector('.modal-close').addEventListener('click', () => overlay.remove());
     overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
-  }
-  
-  // ---------- ОБРАБОТЧИК КНОПОК "ЧИТАТЬ ДАЛЕЕ" ----------
-  function initReadMoreButtons() {
+}
+
+// ---------- ОБРАБОТЧИК КНОПОК "ЧИТАТЬ ДАЛЕЕ" ----------
+function initReadMoreButtons() {
     const buttons = document.querySelectorAll('.read-more-btn');
     buttons.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -893,7 +1171,7 @@ const products = [
             const articleId = btn.dataset.article;
             const article = articles.find(a => a.id === articleId);
             if (!article) return;
-  
+
             if (Auth.currentUser) {
                 openFullArticleModal(article);
             } else {
@@ -903,10 +1181,10 @@ const products = [
             }
         });
     });
-  }
-  
-  // ---------- КАРУСЕЛЬ ОТЗЫВОВ (главная) ----------
-  function initCarousel() {
+}
+
+// ---------- КАРУСЕЛЬ ОТЗЫВОВ (главная) ----------
+function initCarousel() {
     const track = document.querySelector('.carousel-track');
     const dots = document.querySelectorAll('.carousel-dot');
     if (!track || dots.length === 0) return;
@@ -919,25 +1197,25 @@ const products = [
     }
     dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
     setInterval(() => goTo((current + 1) % slides), 5000);
-  }
-  
-  // ---------- СТРАНИЦА КОРЗИНЫ ----------
-  let appliedPromo = null;
-  let currentDiscount = 0;
-  
-  function initCartPage() {
+}
+
+// ---------- СТРАНИЦА КОРЗИНЫ ----------
+let appliedPromo = null;
+let currentDiscount = 0;
+
+function initCartPage() {
     const container = document.getElementById('cartItemsContainer');
     const totalEl = document.getElementById('cartTotal');
     const form = document.getElementById('orderForm');
     if (!container) return;
-  
+
     function recalcTotal() {
         let final = cart.total - currentDiscount;
         if (final < 0) final = 0;
         totalEl.textContent = `${final} ₽ (скидка ${currentDiscount} ₽)`;
         return final;
     }
-  
+
     function renderCart() {
         if (cart.items.length === 0) {
             container.innerHTML = '<p>Ваша корзина пуста.</p>';
@@ -964,7 +1242,7 @@ const products = [
             </div>
         `).join('');
         recalcTotal();
-  
+
         container.querySelectorAll('button[data-action]').forEach(btn => {
             btn.addEventListener('click', () => {
                 const action = btn.dataset.action;
@@ -977,9 +1255,9 @@ const products = [
             });
         });
     }
-  
+
     renderCart();
-  
+
     // Промокод
     const applyBtn = document.getElementById('applyPromoBtn');
     const promoInput = document.getElementById('promoCode');
@@ -1012,7 +1290,7 @@ const products = [
             }
         });
     }
-  
+
     // Оформление заказа
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -1022,7 +1300,7 @@ const products = [
             const phone = form.querySelector('#phone').value.trim();
             const address = form.querySelector('#address').value.trim();
             if (!name || !phone || !address) { showToast('Заполните обязательные поля'); return; }
-  
+
             const finalTotal = recalcTotal();
             const orders = JSON.parse(localStorage.getItem('orders')) || [];
             orders.push({
@@ -1035,10 +1313,10 @@ const products = [
                 track: 'RU' + Math.random().toString(36).substr(2, 9).toUpperCase()
             });
             localStorage.setItem('orders', JSON.stringify(orders));
-  
+
             const earned = Math.round(finalTotal * 0.05);
             Loyalty.addPoints(earned);
-  
+
             showToast(`Заказ оформлен, ${name}! +${earned} баллов лояльности`);
             cart.clear();
             currentDiscount = 0;
@@ -1050,10 +1328,10 @@ const products = [
             setTimeout(() => window.location.href = 'index.html', 3000);
         });
     }
-  }
-  
-  // ---------- СТРАНИЦА ВХОДА / РЕГИСТРАЦИИ ----------
-  function initLoginPage() {
+}
+
+// ---------- СТРАНИЦА ВХОДА / РЕГИСТРАЦИИ ----------
+function initLoginPage() {
     const tabs = document.querySelectorAll('.auth-tab');
     if (tabs.length === 0) return;
     tabs.forEach(tab => {
@@ -1090,10 +1368,10 @@ const products = [
             document.getElementById('authMessage').textContent = 'Пользователь с таким email уже существует.';
         }
     });
-  }
-  
-  // ---------- ЛИЧНЫЙ КАБИНЕТ ----------
-  function initAccountPage() {
+}
+
+// ---------- ЛИЧНЫЙ КАБИНЕТ ----------
+function initAccountPage() {
     const sidebar = document.querySelector('.account-sidebar');
     if (!sidebar) return;
     if (!Auth.currentUser) {
@@ -1103,7 +1381,7 @@ const products = [
     document.getElementById('userGreeting').innerHTML = `<span>👤</span> ${Auth.currentUser.name}`;
     const navBtns = document.querySelectorAll('.account-nav-btn');
     const content = document.getElementById('accountContent');
-  
+
     const sections = {
         profile: renderProfile,
         orders: renderOrders,
@@ -1112,7 +1390,7 @@ const products = [
         addresses: renderAddresses,
         cooperation: renderCooperation
     };
-  
+
     navBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             navBtns.forEach(b => b.classList.remove('active'));
@@ -1121,12 +1399,12 @@ const products = [
             if (sections[section]) sections[section]();
         });
     });
-  
+
     document.getElementById('logoutBtn').addEventListener('click', () => {
         Auth.logout();
         window.location.href = 'index.html';
     });
-  
+
     function renderProfile() {
         const user = Auth.currentUser;
         const points = Loyalty.getPoints();
@@ -1136,7 +1414,7 @@ const products = [
             <div class="form-group"><label>Email</label><input type="email" value="${user.email}" disabled></div>
             <div class="form-group"><label>Телефон</label><input type="tel" id="profilePhone" value="${user.phone || ''}"></div>
             <button class="btn-submit" id="saveProfile">Сохранить</button>
-  
+
             <div style="margin-top:24px; padding:16px; background:#fdf7f0; border-radius:10px;">
                 <h3>Программа лояльности</h3>
                 <p>Ваши баллы: <strong id="loyaltyPoints">${points}</strong> баллов</p>
@@ -1153,7 +1431,7 @@ const products = [
             if (pointsEl) pointsEl.textContent = Loyalty.getPoints();
         });
     }
-  
+
     function renderOrders() {
         const orders = JSON.parse(localStorage.getItem('orders')) || [];
         if (orders.length === 0) {
@@ -1163,16 +1441,16 @@ const products = [
         content.innerHTML = `<h2>История заказов</h2>
             <table class="orders-table">
                 <tr><th>№</th><th>Дата</th><th>Товары</th><th>Сумма</th><th>Статус</th><th>Трек</th></tr>
-                ${orders.map((o,i) => `
+                ${orders.map((o, i) => `
                     <tr>
-                        <td>${i+1}</td><td>${o.date}</td>
+                        <td>${i + 1}</td><td>${o.date}</td>
                         <td>${o.items.map(it => it.name).join(', ')}</td>
                         <td>${o.total} ₽</td><td>${o.status}</td><td>${o.track || '-'}</td>
                     </tr>
                 `).join('')}
             </table>`;
     }
-  
+
     function renderFavorites() {
         const favs = Auth.getFavorites();
         if (favs.length === 0) {
@@ -1198,7 +1476,7 @@ const products = [
             });
         });
     }
-  
+
     function renderTracking() {
         content.innerHTML = `
             <h2>Отслеживание посылки</h2>
@@ -1218,14 +1496,14 @@ const products = [
             }
         });
     }
-  
+
     function renderAddresses() {
         const addresses = JSON.parse(localStorage.getItem('addresses')) || [];
         content.innerHTML = `
             <h2>Мои адреса</h2>
-            <div id="addressList">${addresses.map((a,i) => `
+            <div id="addressList">${addresses.map((a, i) => `
                 <div class="address-item">
-                    <span>${a.label || 'Адрес '+(i+1)}: ${a.street}, ${a.city}, ${a.zip}</span>
+                    <span>${a.label || 'Адрес ' + (i + 1)}: ${a.street}, ${a.city}, ${a.zip}</span>
                     <button class="text-btn" data-delete="${i}">Удалить</button>
                 </div>
             `).join('')}</div>
@@ -1256,7 +1534,7 @@ const products = [
             });
         });
     }
-  
+
     function renderCooperation() {
         content.innerHTML = `
             <h2>Партнёрская программа</h2>
@@ -1273,12 +1551,12 @@ const products = [
             showToast('Заявка отправлена!');
         });
     }
-  
-    renderProfile();
-  }
-  
-  // ---------- СОТРУДНИЧЕСТВО ----------
-  function initCooperationForm() {
+
+    renderProfile(); // загружаем профиль по умолчанию
+}
+
+// ---------- СОТРУДНИЧЕСТВО (отдельная страница) ----------
+function initCooperationForm() {
     const form = document.getElementById('coopForm');
     if (!form) return;
     form.addEventListener('submit', (e) => {
@@ -1289,10 +1567,10 @@ const products = [
         showToast('Заявка отправлена! Мы ответим в течение 24 часов.');
         form.reset();
     });
-  }
-  
-  // ---------- СТРАНИЦА КОНТЕНТА ----------
-  function initContentTabs() {
+}
+
+// ---------- СТРАНИЦА КОНТЕНТА ----------
+function initContentTabs() {
     const tabs = document.querySelectorAll('.content-tab');
     const panels = document.querySelectorAll('.content-panel');
     if (tabs.length === 0) return;
@@ -1305,18 +1583,19 @@ const products = [
             document.getElementById(target)?.classList.add('active');
         });
     });
-  
+
     document.querySelectorAll('.faq-question').forEach(q => {
         q.addEventListener('click', () => {
             const item = q.parentElement;
             item.classList.toggle('open');
         });
     });
-  
+
     initReadMoreButtons();
-  }
-  
-  class CapybaraAssistant {
+}
+
+// ---------- КАПИБАРА-ПОМОЩНИК ----------
+class CapybaraAssistant {
     constructor() {
         // Словарь синонимов
         this.synonyms = {
@@ -1485,56 +1764,39 @@ const products = [
                 'Привет! Я тут, чтобы помочь с выбором подарков ручной работы.'
             ];
             answer = greetings[Math.floor(Math.random() * greetings.length)];
-        }
-        else if (this.synonyms.order.some(word => q.includes(word))) {
+        } else if (this.synonyms.order.some(word => q.includes(word))) {
             answer = 'Всё просто: добавьте понравившиеся товары в корзину, перейдите в неё, заполните имя, телефон и адрес, и нажмите «Оформить заказ».';
-        }
-        else if (this.synonyms.delivery.some(word => q.includes(word))) {
+        } else if (this.synonyms.delivery.some(word => q.includes(word))) {
             answer = 'Отправляем Почтой России или СДЭК. Обычно заказ идёт 3–10 рабочих дней. Каждое изделие тщательно упаковываем.';
-        }
-        else if (this.synonyms.payment.some(word => q.includes(word))) {
+        } else if (this.synonyms.payment.some(word => q.includes(word))) {
             answer = 'Пока мы работаем по предоплате: перевод на карту или по реквизитам. В будущем добавим онлайн-оплату.';
-        }
-        else if (this.synonyms.discount.some(word => q.includes(word))) {
+        } else if (this.synonyms.discount.some(word => q.includes(word))) {
             answer = 'Да, у нас бывают скидки! Действуют промокоды CAPY10 (-10%) и CAPY500 (-500₽). Также дарим скидку 10% за подписку.';
-        }
-        else if (this.synonyms.giftWrap.some(word => q.includes(word))) {
+        } else if (this.synonyms.giftWrap.some(word => q.includes(word))) {
             answer = 'Каждый заказ упаковываем в крафтовую бумагу с ленточкой и открыткой. Бесплатно!';
-        }
-        else if (this.synonyms.individual.some(word => q.includes(word))) {
+        } else if (this.synonyms.individual.some(word => q.includes(word))) {
             answer = 'Конечно! Мы создадим изделие по вашим пожеланиям. Напишите на почту capybara.art@mail.ru с описанием идеи.';
-        }
-        else if (this.synonyms.return.some(word => q.includes(word))) {
+        } else if (this.synonyms.return.some(word => q.includes(word))) {
             answer = 'Если изделие не подошло или есть дефект, напишите нам в течение 7 дней. Заменим или вернём деньги.';
-        }
-        else if (this.synonyms.materials.some(word => q.includes(word))) {
+        } else if (this.synonyms.materials.some(word => q.includes(word))) {
             answer = 'Используем только качественные материалы: японский бисер, чешский жемчуг, натуральную шерсть. Украшения не мочить, игрушки чистить мягкой щёткой.';
-        }
-        else if (this.synonyms.timing.some(word => q.includes(word))) {
+        } else if (this.synonyms.timing.some(word => q.includes(word))) {
             answer = 'Обычно на изготовление уходит 3–7 дней. Срочные заказы обсуждаем индивидуально.';
-        }
-        else if (this.synonyms.account.some(word => q.includes(word))) {
+        } else if (this.synonyms.account.some(word => q.includes(word))) {
             answer = 'Зарегистрируйтесь через кнопку «Войти» в шапке сайта. В личном кабинете можно отслеживать заказы и копить баллы.';
-        }
-        else if (this.synonyms.loyalty.some(word => q.includes(word))) {
+        } else if (this.synonyms.loyalty.some(word => q.includes(word))) {
             answer = 'За каждый заказ начисляются баллы (5% от суммы). 1 балл = 1 рубль скидки. Баланс виден в профиле.';
-        }
-        else if (this.synonyms.partnership.some(word => q.includes(word))) {
+        } else if (this.synonyms.partnership.some(word => q.includes(word))) {
             answer = 'Мы открыты к сотрудничеству с магазинами, ярмарками и блогерами. Оставьте заявку на странице «Сотрудничество».';
-        }
-        else if (this.synonyms.contacts.some(word => q.includes(word))) {
+        } else if (this.synonyms.contacts.some(word => q.includes(word))) {
             answer = 'Email: capybara.art@mail.ru. Соцсети — в футере сайта (ВК, Telegram, Instagram).';
-        }
-        else if (this.synonyms.size.some(word => q.includes(word))) {
+        } else if (this.synonyms.size.some(word => q.includes(word))) {
             answer = 'Размеры указаны в описании товара. Если сомневаетесь, напишите — поможем подобрать или изменим размер.';
-        }
-        else if (this.synonyms.giftIdea.some(word => q.includes(word))) {
+        } else if (this.synonyms.giftIdea.some(word => q.includes(word))) {
             answer = 'Для мамы/подруги — букеты из лент или серьги. Для детей — валяные игрушки. Универсальный вариант — именная фенечка.';
-        }
-        else if (this.synonyms.complaint.some(word => q.includes(word))) {
+        } else if (this.synonyms.complaint.some(word => q.includes(word))) {
             answer = 'Ой, простите за неудобства! Напишите на capybara.art@mail.ru, и мы всё решим.';
-        }
-        else if (this.synonyms.catalog.some(word => q.includes(word))) {
+        } else if (this.synonyms.catalog.some(word => q.includes(word))) {
             answer = 'Наш каталог доступен по ссылке в меню «Каталог». Там вы найдёте все актуальные работы!';
         }
 
@@ -1570,8 +1832,6 @@ const products = [
                     teachContainer.remove();
                 }
             });
-
-            // Удаляем контейнер при следующем сообщении (можно улучшить)
         } else {
             setTimeout(() => this.addBotMessage(answer), 500);
         }
@@ -1610,23 +1870,23 @@ const products = [
         this.addBotMessage(message);
     }
 }
-  
-  // ---------- КНОПКА НАВЕРХ ----------
-  function initScrollTop() {
+
+// ---------- КНОПКА НАВЕРХ ----------
+function initScrollTop() {
     const btn = document.getElementById('scrollTopBtn');
     if (!btn) return;
     window.addEventListener('scroll', () => {
         btn.classList.toggle('visible', window.scrollY > 400);
     });
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  }
-  
-  // ---------- ЗАПУСК ----------
-  document.addEventListener('DOMContentLoaded', () => {
+}
+
+// ---------- ЗАПУСК ----------
+document.addEventListener('DOMContentLoaded', () => {
     updateCartBadge();
     updateHeaderUser();
     initScrollTop();
-  
+
     if (document.getElementById('productsGrid')) initCatalog();
     if (document.querySelector('.carousel-track')) initCarousel();
     if (document.getElementById('cartItemsContainer')) initCartPage();
@@ -1634,12 +1894,13 @@ const products = [
     if (document.querySelector('.auth-tab')) initLoginPage();
     if (document.querySelector('.account-sidebar')) initAccountPage();
     if (document.querySelector('.content-tab')) initContentTabs();
-  
-    assistant = new CapybaraAssistant();
-  
+    if (document.getElementById('featuredTrack')) initFeaturedCarousel();
+
+    window.assistant = new CapybaraAssistant();
+
     const originalAdd = cart.add.bind(cart);
     cart.add = function(product, qty) {
         originalAdd(product, qty);
-        if (assistant) assistant.say(`Отличный выбор! ${product.name} уже в корзине.`);
+        if (window.assistant) window.assistant.say(`Отличный выбор! ${product.name} уже в корзине.`);
     };
-  });
+});
